@@ -4,10 +4,7 @@ const addUser = ({ id, name, room }) => {
   name = name
   room = room
 
-  const existingUser = users.find((user) => user.room === room && user.name === name);
-
-  if(!name || !room) return { error: 'Username and room are required.' };
-  if(existingUser) return { error: 'Username is taken.' };
+  if(!name || !room) return { error: 'Error entering chat. Please try again.' };
 
   const user = { id, name, room };
 

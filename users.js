@@ -4,7 +4,9 @@ const addUser = ({ id, name, room }) => {
   name = name
   room = room
 
-  if(!name || !room) return { error: 'Error entering chat. Please try again.' };
+  // if(!name || !room) return { error: 'Error entering chat. Please try again.' };
+  if(!name) return { error: 'name' };
+  if(!room) return { error: 'Room'}
 
   const user = { id, name, room };
 
